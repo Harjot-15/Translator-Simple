@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* Reset and basic styling */
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Patrick Hand', cursive;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header styling */
+.header {
+    background-color: #fbd589; /* Google's blue */
+    color: black;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.header p {
+    color: black;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Main content area */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Translator canvas styling */
+.translator-canvas {
+    background-color: #79d750;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .translator-canvas {
+        width: 90%;
+    }
+}
+
+/* Language selector and text area styling */
+.language-selectors, .text-areas {
+    margin: 10px 0;
+}
+
+.language-selectors select, .text-areas textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 16px;
+}
+
+/* Text area styling */
+textarea {
+    width: calc(100% - 22px); /* Adjusting for padding and border */
+    min-height: 100px;
+    resize: vertical;
+}
+
+#translatedText {
+    background-color: #f8f8f8;
+}
+
+/* Language swap button styling */
+.swap-languages {
+    background-color: whitesmoke;
+    color: Black;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+/* Dark mode specific styling */
+.dark-mode {
+    background-color: #282c34;
+    color: #fff;
+}
+
+.dark-mode .translator-canvas {
+    background-color: #3c4043;
+    color: #fff;
+}
+
+.dark-mode .header {
+    background-color: #20232a;
+}
+
+/* Existing styles... */
+
+/* Light mode specific styling */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .translator-canvas, .dark-mode .assistant-canvas {
+    background-color: #333; /* Near black for the canvas */
+    color: white;
+}
+
+.dark-mode .header, .dark-mode .header p {
+    background-color: #222; /* Darker shade for the header */
+  color: white;
+}
+
+/* Toggle Switch Styles */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 10px;
+}
+
+.toggle-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+
+.toggle-checkbox:checked + .toggle-label:before {
+    transform: translateX(26px);
+}
+
+/* Dark mode adjustments */
+.dark-mode .toggle-label {
+    background-color: #757575;
+}
+
+.dark-mode .toggle-checkbox:checked + .toggle-label {
+    background-color: #444;
+}

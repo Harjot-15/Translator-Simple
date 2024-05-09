@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-time Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="header">
+        <h1>Language Translator</h1>
+        <p>⚒️🛠️ Created by ⚒️🛠️ : "Harjot Singh" </p>
+      <div class="toggle-switch">
+          <input type="checkbox" id="modeToggle" class="toggle-checkbox">
+          <label for="modeToggle" class="toggle-label"></label>
+      </div>
+
+    </div>
+    <div class="main-content">
+        <div class="translator-canvas">
+            <h2>Translator</h2>
+            <div class="translator-wrapper">
+                <div class="language-selectors">
+                    <select id="sourceLanguage"></select>
+                    <div class="swap-languages">&harr;</div>
+                    <select id="targetLanguage"></select>
+                </div>
+                <div class="text-areas">
+                    <textarea id="sourceText" placeholder="Enter text"></textarea>
+                    <textarea id="translatedText" placeholder="Translation" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
